@@ -32,6 +32,8 @@ local.properties
 
 # node.js
 #
+./web/dist
+./web/.cache
 ./web/node_modules/
 node_modules/
 npm-debug.log
