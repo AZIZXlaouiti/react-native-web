@@ -1,19 +1,17 @@
 import React from 'react';
-import ReactDOM , {render} from 'react-dom';
+import {render} from 'react-dom';
 import { View  , StyleSheet} from 'react-native';
 import { Counter } from '../shared/components/counter';
 
+const styles = StyleSheet.create({
+    conatiner:{
+      width: "100%",
+      height: "100%"
+    }
+  })
 const App =()=>{
-    const styles = StyleSheet.create({
-        conatiner:{
-          width: "100%",
-          height: "100%"
-        }
-      })
     return (
-        <View style={styles.conatiner}> 
             <Counter/>
-        </View>
     )
 }
 
