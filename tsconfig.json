@@ -7,22 +7,19 @@
     "lib": ["es6", "esnext.asynciterable", "es2017"],
     "strict": true,
     "esModuleInterop": true,
-    "rootDir": "src",
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "skipLibCheck": true,
     "baseUrl": ".",
     "allowSyntheticDefaultImports": true,
-    "removeComments": true
+    "removeComments": true,
+    
   },
-  "exclude": ["node_modules"],
-  "include": [
-    "./src/**/*.ts",
-    "./app/shared/**/*.tsx"
-  ]
+  "exclude": ["node_modules"]
+ 
 }

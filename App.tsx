@@ -6,18 +6,11 @@ import { View, Text  , StyleSheet , Image, Pressable} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {Counter} from './app/shared/components/counter'
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screen</Text>
-    </View>
-  )
-}
+import Nav from './app/shared/navigation/screens/nav'
 
 
 function App() {
   return (
-
    <View
      style={styles.newRootRoot}
    >
@@ -269,3 +262,7 @@ const DisplayAnImage = () => {
 
 
 export default App;
+
+function alert(arg0: string): void {
+  throw new Error('Function not implemented.');
+}
