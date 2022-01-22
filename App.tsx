@@ -1,123 +1,271 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * Generated with the TypeScript template
- * https://github.com/react-native-community/react-native-template-typescript
- *
- * @format
- */
+// In App.js in a new project
 
-import React , {useState} from 'react';
-import {
-  Button,
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
-
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import * as React from 'react';
+import  SvgUri  from 'react-native-svg-uri';
+import { View, Text  , StyleSheet , Image, Pressable} from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {Counter} from './app/shared/components/counter'
-
-const Section: React.FC<{
-  title: string;
-}> = ({children, title}) => {
-  const isDarkMode = useColorScheme() === 'dark';
+function HomeScreen() {
   return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Home Screen</Text>
     </View>
-  );
-};
+  )
+}
 
-const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-  const [count , setCount] = useState(0);
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
 
+function App() {
   return (
-   <Counter/>
-  );
-};
+
+   <View
+     style={styles.newRootRoot}
+   >
+    <View
+     style={styles.propert10nProfile}
+    >
+     <View
+      style={styles.Rectangle70}
+     >
+     <Pressable
+       style={styles.Rectangle81}
+       onPress={()=>alert('pressed')}
+     >   
+       <Image
+        style={styles.logo}
+        source={{
+          uri: 'https://user-images.githubusercontent.com/79036942/150620823-31a786f0-4542-4639-b640-1080cf894b2e.png'
+        }}
+        resizeMode={'cover'} 
+      />
+        <Text style={styles.Info}>Home</Text>
+      </Pressable>
+     <View
+       style={styles.Rectangle81}
+       >
+         <Image
+          style={styles.logo}
+          source={{
+            uri:'https://user-images.githubusercontent.com/79036942/150621195-afe70266-f802-4aad-bebe-fe1d78763522.png'
+          }}
+         />
+      
+        <Text style={styles.Info}>Info</Text>
+     </View>
+     <View
+       style={styles.Rectangle81}
+     >
+       <Image
+          style={styles.logo}
+          source={{
+            uri:'https://user-images.githubusercontent.com/79036942/150621470-432cc4f7-194b-499f-a9d2-bdf2b3170cfa.png'
+          }}
+         />
+       <Text style={styles.Info}>Apply</Text>
+     </View>
+     <View
+       style={styles.Rectangle81}
+       >
+        <Image
+          style={styles.logo}
+          source={{
+            uri:'https://user-images.githubusercontent.com/79036942/150621538-81f29903-2b80-4d6f-b0ed-d8f27dfcd364.png'
+          }}
+         />
+      <Text style={styles.Info}>Contact</Text>
+     </View>
+     <View
+       style={styles.Rectangle76}
+     >
+        <Image
+          style={styles.logo}
+          source={{
+            uri:'https://user-images.githubusercontent.com/79036942/150621590-a71dc143-4200-42e3-8a91-866235a5c143.png'
+          }}
+         />
+      <Text style={styles.Profile}>Profile</Text>
+     </View>
+     
+     </View>
+    </View>
+   </View>
+  )
+}
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+  
+  newRootRoot :{ 
+     width:'100%',
+     height: 78,
+     flexDirection: 'column',
+     justifyContent: 'center'
   },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
+  propert10nProfile:{
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center'
   },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
+  Rectangle70 :{
+    backgroundColor: '#0c0b37',
+    width: '100%',
+    height: '100%',
+    display: 'flex',
+    justifyContent:'center',
+    flexDirection: 'row',
+    paddingLeft: 11,
+    paddingRight: 9,
+    paddingTop: 10,
+    paddingBottom: 11,
+  },
+  Rectangle76 : {
+    backgroundColor: '#92b53d',
+    width: 60,
+    height: 60,
+    marginRight: 13,
+    position: 'relative',
+    borderRadius: 3,
+    alignItems:'center',
+    
+  },
+  Antdesignhomeoutlined:{
+    width: 47,
+    height: 42,
+    position: 'absolute',
+    top: 2,
+    left: 7,
+  },
+  Rectangle81 :{
+    backgroundColor: '#0c0b37',
+    height: 58,
+    marginRight: 19,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'flex-end',
+    gap: 2,
+    paddingTop: 1,
+    paddingBottom: 1,
+    paddingLeft: 11,
+    paddingRight: 10,
+    alignItems: 'center',
+    borderRadius: 5
+  },
+  Infosquare1 :{
+    width: '39',
+    height: '36',
+    alignSelf: 'stretch',
+  },
+  Info :{
+    color: '#efd5a9',
+    fontSize: 12,
+    fontFamily: 'Open Sans',
     fontWeight: '400',
+    letterSpacing: -0.2,
   },
-  highlight: {
-    fontWeight: '700',
+  Rectangle82 :{
+    backgroundColor: '#0c0b37',
+    width: '60px',
+    height: '60px',
+    marginRight: '17px',
+    position: 'relative',
+    borderRadius: 5
   },
-});
+  Fluenttextbulletlistsquareedit24regular :{
+    width: '41px',
+    height: '40px',
+    position: 'absolute',
+    top: '4px',
+    left: '10px'
+  },
+  Rectangle80 :{
+    backgroundColor: '#0c0b37',
+    width: 60,
+    height: 60,
+    marginRight: 6,
+    position: 'relative',
+    borderRadius: 5,
+  },
+  Bxbxphone:{
+    width: '41px',
+    height: '42px',
+    position: 'absolute',
+    top: '2px',
+    left: '7px',
+  },
+  Contact :{
+    color: '#efd5a9',
+    fontSize: 12,
+    fontFamily: 'Open Sans',
+    fontWeight: '400',
+    letterSpacing:-0.2,
+    position: 'absolute',
+    top: 43,
+    left: 9,
+  },
+  Rectangle801 :{
+    backgroundColor: '#92b53d',
+    height: 60,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    paddingLeft: 11,
+    paddingRight: 8,
+    alignItems: 'center',
+    borderRadius: 5,
+  },
+  Profile :{
+    color: '#0c0b37',
+    fontSize: 14,
+    fontFamily: 'Open Sans',
+    fontWeight: 'bold',
+    letterSpacing: -0.2
+  },
+  Home :{
+    color: '#efd5a9',
+    fontSize: 12,
+    fontFamily: "Open Sans",
+    fontWeight: '400',
+    letterSpacing: -0.2,
+    position: 'absolute',
+    top: 43,
+    left: 14,
+  },
+  container: {
+    paddingTop: 50,
+  },
+  tinyLogo: {
+    width: 50,
+    height: 50,
+  },
+  logo: {
+    width: 39,
+    height: 36,
+  },
+})
+
+
+
+
+const DisplayAnImage = () => {
+  return (
+    <View style={styles.container}>
+    
+      <Image
+        style={styles.tinyLogo}
+        source={{
+          uri: 'https://reactnative.dev/img/tiny_logo.png',
+        }}
+      />
+      <Image
+        style={styles.logo}
+        source={{
+          uri: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg==',
+        }}
+      />
+    </View>
+  );
+}
+
+
+
 
 export default App;
-
-
-// function useState(): [any, any] {
-//   throw new Error('Function not implemented.');
-// }
-// <SafeAreaView style={backgroundStyle}>
-// <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-// <ScrollView
-//   contentInsetAdjustmentBehavior="automatic"
-//   style={backgroundStyle}>
-//   <Header />
-//   <View
-//     style={{
-//       backgroundColor: isDarkMode ? Colors.black : Colors.white,
-//     }}>
-//     <Section title="Step One">
-//       Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-//       screen and then come back to see your edits.
-//     </Section>
-//     <Section title="See Your Changes">
-//       <ReloadInstructions />
-//     </Section>
-//     <Section title="Debug">
-//       <DebugInstructions />
-//     </Section>
-//     <Section title="Learn More">
-//       Read the docs to discover what to do next:
-//     </Section>
-//     <LearnMoreLinks />
-//   </View>
-// </ScrollView>
-// </SafeAreaView>

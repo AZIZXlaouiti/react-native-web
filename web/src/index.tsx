@@ -11,7 +11,9 @@ const styles = StyleSheet.create({
   })
 const App =()=>{
     return (
+        <View style={styles.conatiner}> 
             <Counter/>
+        </View>
     )
 }
 

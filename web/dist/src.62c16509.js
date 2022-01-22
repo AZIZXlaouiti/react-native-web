@@ -61343,13 +61343,14 @@ var react_native_1 = require("react-native");
 
 var counter_1 = require("../shared/components/counter");
 
+var styles = react_native_1.StyleSheet.create({
+  conatiner: {
+    width: "100%",
+    height: "100%"
+  }
+});
+
 var App = function App() {
-  var styles = react_native_1.StyleSheet.create({
-    conatiner: {
-      width: "100%",
-      height: "100%"
-    }
-  });
   return react_1.default.createElement(react_native_1.View, {
     style: styles.conatiner
   }, react_1.default.createElement(counter_1.Counter, null));
@@ -61386,7 +61387,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45687" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35855" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
